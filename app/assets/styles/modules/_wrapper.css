@@ -1,0 +1,25 @@
+.wrapper {
+    overflow: hidden; /* Para controlar el desborde de las columnas internas */
+    padding-left: 1.13rem;
+    padding-right: 1.13rem;
+    max-width: 77.26rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &--medium {
+        max-width: 61rem;
+    }
+    
+    &--b-margin {
+        margin-bottom: 1rem;
+        
+        @mixin atSmall {
+        margin-bottom: 3.875rem;
+        }
+    }
+    
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
