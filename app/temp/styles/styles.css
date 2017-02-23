@@ -686,8 +686,16 @@ a {
   margin-right: -4.563rem;
 }
 
+.row--gutters-large {
+  margin-right: -6.25rem;
+}
+
 .row--gutters > div {
   padding-right: 4.563rem;
+}
+
+.row--gutters-large > div {
+  padding-right: 6.25rem;
 }
 
 .row__b-margin-until-medium {
@@ -709,6 +717,11 @@ a {
     width: 37.5%;
   }
 
+  .row__medium-6 {
+    float: left;
+    width: 50%;
+  }
+
   .row__medium-8 {
     float: left;
     width: 66.66%;
@@ -720,8 +733,9 @@ a {
 }
 
 .generic-content-container p {
+  font-weight: 300;
   line-height: 1.65;
-  margin: 1.8rem 0;
+  margin: 0 0 1.8rem 0;
 }
 
 @media (min-width: 530px) {
@@ -747,4 +761,21 @@ a {
 
 .section-title__icon {
   margin-right: .7rem;
+}
+
+.feature-item {
+    position: relative;
+	padding-left: 6.125rem;
+    padding-bottom: 2.5rem;
+}
+
+.feature-item__icon {
+  position: absolute;
+  left: 0;
+}
+
+.feature-item__title {
+  font-size: 1.875rem;
+  font-weight: 400;
+  margin-bottom: .8rem;
 }
