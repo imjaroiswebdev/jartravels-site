@@ -622,6 +622,11 @@ a {
   color: #fff;
 }
 
+.page-section--testimonials {
+  background: url(/assets/images/testimonials-bg.jpg) top center no-repeat;
+  background-size: cover;
+}
+
 .headline {
     font-weight: 300;
     font-size: 1.9rem;
@@ -682,6 +687,10 @@ a {
   display: table;
 }
 
+.row--t-padding {
+  padding-top: 80px;
+}
+
 .row--gutters {
   margin-right: -4.563rem;
 }
@@ -690,12 +699,20 @@ a {
   margin-right: -6.25rem;
 }
 
+.row--gutters-small {
+  margin-right: -3.125rem;
+}
+
 .row--gutters > div {
   padding-right: 4.563rem;
 }
 
 .row--gutters-large > div {
   padding-right: 6.25rem;
+}
+
+.row--gutters-small > div {
+  padding-right: 3.125rem;
 }
 
 .row__b-margin-until-medium {
@@ -732,6 +749,22 @@ a {
   }
 }
 
+@media (min-width: 800px) {
+
+  .row--equal-height-at-medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-medium > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .generic-content-container p {
   font-weight: 300;
   line-height: 1.65;
@@ -766,6 +799,10 @@ a {
   font-weight: 500;
 }
 
+.section-title--blue {
+  color: #2f5572;
+}
+
 .section-title__icon {
   display: block;
   margin-left: auto;
@@ -776,6 +813,8 @@ a {
 @media (min-width: 530px) {
 
   .section-title__icon {
+    position: relative;
+    top: .5rem;
     display: inline-block;
     margin-left: 0;
     margin-right: .7rem;
@@ -824,4 +863,36 @@ a {
     font-size: 1.875rem;
     text-align: left;
   }
+}
+
+.testimonials {
+	background-color: rgba(255, 255, 255, .80);
+    padding: 0 1.813rem 1px 1.813rem;
+}
+
+.testimonials__photo {
+  position: relative;
+  top: -80px;
+  margin: 0 auto -80px auto;
+  width: 160px;
+  height: 160px;
+  border: solid 7px rgba(255, 255, 255, .80);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials__title {
+  color: #2f5572;
+  text-align: center;
+  font-size: 1.313rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.testimonials__subtitle {
+  color: #d59541;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: .3rem 0 0;
 }
