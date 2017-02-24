@@ -1,6 +1,12 @@
 .testimonials {
 	background-color: rgba(255, 255, 255, .80);
-    padding: 0 1.813rem 1px 1.813rem;
+    padding: 0 1.13rem 1px 1.13rem;
+    margin-bottom: 98px;
+    
+    @mixin atLarge {
+        padding: 0 1.813rem 1px 1.813rem;
+        margin-bottom: 0;
+    }
     
     &__photo {
         position: relative;
@@ -27,5 +33,9 @@
         font-size: 1rem;
         font-weight: 500;
         margin: .3rem 0 0;        
+    }
+    
+    &__last {
+        margin-bottom: 0;
     }
 }

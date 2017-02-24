@@ -590,6 +590,32 @@ a {
   max-width: 61rem;
 }
 
+.wrapper--no-padding-until-medium {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 800px) {
+
+  .wrapper--no-padding-until-medium {
+    padding-left: 1.13rem;
+    padding-right: 1.13rem;
+  }
+}
+
+.wrapper--no-padding-until-large {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .wrapper--no-padding-until-large {
+    padding-left: 1.13rem;
+    padding-right: 1.13rem;
+  }
+}
+
 .wrapper--b-margin {
   margin-bottom: 1rem;
 }
@@ -623,8 +649,39 @@ a {
 }
 
 .page-section--testimonials {
-  background: url(/assets/images/testimonials-bg.jpg) top center no-repeat;
-  background-size: cover;
+  background-color: #d1dfea;
+}
+
+/* Para la versión mobile quitamos la imagen de BG y usamos mejor un color */
+
+@media (min-width: 800px) {
+
+  .page-section--testimonials {
+    background: url(/assets/images/testimonials-bg.jpg) top center no-repeat;
+    background-size: cover;
+  }
+}
+
+.page-section--no-b-padding-until-medium {
+  padding-bottom: 0;
+}
+
+@media (min-width: 800px) {
+
+  .page-section--no-b-padding-until-medium {
+    padding-bottom: 4.5rem;
+  }
+}
+
+.page-section--no-b-padding-until-large {
+  padding-bottom: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .page-section--no-b-padding-until-large {
+    padding-bottom: 4.5rem;
+  }
 }
 
 .headline {
@@ -765,6 +822,52 @@ a {
   display: flex;
 }
 
+@media (min-width: 1010px) {
+
+  .row__b-margin-until-large {
+    margin-bottom: 0;
+  }
+
+  .rowlarge-4 {
+    float: left;
+    width: 33.33%;
+  }
+
+  .rowlarge-4--smaller {
+    width: 37.5%;
+  }
+
+  .rowlarge-6 {
+    float: left;
+    width: 50%;
+  }
+
+  .rowlarge-8 {
+    float: left;
+    width: 66.66%;
+  }
+
+  .rowlarge-8--larger {
+    width: 62.5%;
+  }
+}
+
+@media (min-width: 1010px) {
+
+  .row--equal-height-at-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-large > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .generic-content-container p {
   font-weight: 300;
   line-height: 1.65;
@@ -867,7 +970,16 @@ a {
 
 .testimonials {
 	background-color: rgba(255, 255, 255, .80);
+    padding: 0 1.13rem 1px 1.13rem;
+    margin-bottom: 98px;
+}
+
+@media (min-width: 1010px) {
+
+  .testimonials {
     padding: 0 1.813rem 1px 1.813rem;
+    margin-bottom: 0;
+  }
 }
 
 .testimonials__photo {
@@ -895,4 +1007,8 @@ a {
   font-size: 1rem;
   font-weight: 500;
   margin: .3rem 0 0;
+}
+
+.testimonials__last {
+  margin-bottom: 0;
 }
