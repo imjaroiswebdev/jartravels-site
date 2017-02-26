@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     cssvars = require('postcss-simple-vars'),
     nested = require('postcss-nested'),
     cssImport = require('postcss-import'),
-    mixins = require('postcss-mixins');
+    mixins = require('postcss-mixins'),
+    hexrgba = require('postcss-hexrgba');
 
 gulp.task('styles', function () { // Esta tarea se usará para pre procesamiento de CSS.
     return gulp.src('./app/assets/styles/styles.css')
@@ -12,6 +13,7 @@ gulp.task('styles', function () { // Esta tarea se usará para pre procesamiento
                        mixins,
                        cssvars,
                        nested,
+                       hexrgba,
                        autoprefixer])) // postcss espera como argumento un array
         .on('error', function (errorInfo) { // Fallback function para manejo de errores de esta tarea y evitar que watch se detenga
             console.log(errorInfo.toString());

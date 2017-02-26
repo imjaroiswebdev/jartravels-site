@@ -503,6 +503,16 @@ a {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  padding-top: 5.625rem;
+}
+
+/* Regla agregada para ajustar el espacio ocupado por el header en el layout responsive */
+
+@media (min-width: 800px) {
+
+  .large-hero__text-content {
+    padding-top: 3.75rem;/* Regla agregada para ajustar el espacio ocupado por el header en el layout para pantallas grandes*/
+  }
 }
 
 .large-hero__title {
@@ -1111,4 +1121,102 @@ a {
     margin-bottom: 0;
     margin-right: 3.375rem;
   }
+}
+
+.site-header {
+	position: absolute;
+    padding: 0.625rem 0;
+    width: 100%;
+    z-index: 5;
+}
+
+@media (min-width: 800px) {
+
+  .site-header {
+    background-color: rgba(47,85,114, .3);
+  }
+}
+
+.site-header__btn-container {
+  float: right;
+}
+
+.site-header__logo {
+  position: absolute;
+  top: 0;
+  background-color: #2f5572;
+  padding: 27px 40px;/* Para mantener el aspecto del logo se usarán px, en vez de rems */
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(.80);
+          transform: translateX(-50%) scale(.80);/* Cuando se trabaja con sprites la manera mas comoda y eficiente de manipular el tamaño de las imágenes para desarrollar las vistas responsive es con transform: scale() */
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__logo {
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.site-header__logo__graphic {
+  text-indent: -9999px;/* Con esto se oculta el texto que serviría como alt="" si fuese una imagen tradicional */
+}
+
+.site-header__menu-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 10px;
+  background-color: #fff;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__menu-icon {
+    display: none;
+  }
+}
+
+.site-header__menu-content {
+  display: none;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__menu-content {
+    display: block;
+  }
+}
+
+.primary-nav--pull-right {
+  float: right;
+}
+
+.primary-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.primary-nav li {
+  list-style: none;
+  float: left;
+  padding-right: 1.375rem;
+  padding-top: 11px;
+}
+
+.primary-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
 }

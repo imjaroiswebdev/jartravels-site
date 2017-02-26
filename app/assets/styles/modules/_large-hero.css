@@ -16,6 +16,11 @@
         /* Centrado Vertical */
         top: 50%;
         transform: translateY(-50%);
+        padding-top: 5.625rem; /* Regla agregada para ajustar el espacio ocupado por el header en el layout responsive */
+        
+        @mixin atMedium {
+            padding-top: 3.75rem; /* Regla agregada para ajustar el espacio ocupado por el header en el layout para pantallas grandes*/
+        }
     }
     &__title {
         font-weight: 300;

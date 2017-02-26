@@ -1,0 +1,55 @@
+.site-header {
+	position: absolute;
+    padding: 0.625rem 0;
+    width: 100%;
+    z-index: 5;
+    
+    @mixin atMedium {
+        background-color: rgba($mainBlue, .3);
+    }
+    
+    &__btn-container {
+        float: right;
+    }
+    
+    &__logo {
+        position: absolute;
+        top: 0;
+        background-color: $mainBlue;
+        padding: 27px 40px; /* Para mantener el aspecto del logo se usarán px, en vez de rems */
+        left: 50%;
+        transform: translateX(-50%) scale(.80); /* Cuando se trabaja con sprites la manera mas comoda y eficiente de manipular el tamaño de las imágenes para desarrollar las vistas responsive es con transform: scale() */
+        transform-origin: 50% 0;
+        
+        @mixin atMedium {
+            left: auto;
+            transform: none;
+        }        
+    }
+    
+    &__logo__graphic {
+        text-indent: -9999px; /* Con esto se oculta el texto que serviría como alt="" si fuese una imagen tradicional */
+    }
+    
+    &__menu-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 10px;
+        top: 10px;
+        background-color: #fff;
+        
+        @mixin atMedium {
+            display: none;
+        }
+        
+    }
+    
+    &__menu-content {
+        display: none;
+        
+        @mixin atMedium {
+            display: block;
+        }
+    }
+}
