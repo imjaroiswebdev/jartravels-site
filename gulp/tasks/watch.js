@@ -19,9 +19,17 @@ gulp.task('watch', function () {
     watch('./app/assets/styles/**/*.css', function () {
         gulp.start('cssInject'); // A través de cssInject se aplicará el procesamiento de PostCSS
     });
+    
+    watch('./app/assets/scripts/**/*.js', function() {
+       gulp.start('scriptsRefresh') 
+    });
 });
 
 gulp.task('cssInject', ['styles'], function () { // Se esta pasando como dependencia de la tarea cssInject, la tarea styles, para que aplique todo el procesamiento de PostCSS antes de proceder a inyectar los cambios en el CSS que se esta presentando
     return gulp.src('./app/temp/styles/styles.css')
         .pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+    browserSync.reload();
 });
